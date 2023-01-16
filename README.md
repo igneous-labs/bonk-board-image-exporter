@@ -21,3 +21,16 @@ Options:
   -V, --version
           Print version
 ```
+
+
+For example, export image `./daftbonk-final.bmp` to `./daftbonk-final.json`
+excluding black pixels and position it at x = 375, y = 250:
+
+```shell
+./bonk-board-image-exporter -t "375,250" -c "0,0,0"  -i ./daftbonk-final.bmp -o ./daftbonk-final.json
+INFO [bonk_board_image_exporter] Reading image file: ./daftbonk-final.bmp
+INFO [bonk_board_image_exporter] Read total 2944 pixels (image: 64x46)
+INFO [bonk_board_image_exporter] Excluding the given color Color { r: 0, g: 0, b: 0 }, prepared 1376 pixels to write
+INFO [bonk_board_image_exporter] With the given maxium 100 pixels per tx, writing an array of length 14 to file
+INFO [bonk_board_image_exporter] Done
+```
